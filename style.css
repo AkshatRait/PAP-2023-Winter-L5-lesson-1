@@ -7,6 +7,8 @@
 
 */
 
+
+
 html {
     height: 100%;
 }
@@ -70,17 +72,18 @@ main {
     max-width: 1200px;
     /* Part 1 Exercise 9 */
     margin: auto;
+    display: flex;
+    flex-direction: column;
 
 }
 
 .machine {
-    width: 30%;
+
     background-color: #ece4d9;
     border: solid 4px #664b3d;
     /* Part 1 Exercise 7 */
     margin: 0 1% 40px 1%;
     /* Part 1 Exercise 8 */
-    display: inline-block;
     vertical-align: top;  
 
 }
@@ -91,6 +94,28 @@ main {
     }
 
 
+ @Media(min-width:800px){
+   main{
+
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: strech;
+    flex-direction: column;}
+
+ }
+
+ @Media(min-width:800px) and (max-width:1099px){
+    .machine{
+        width: 46%;
+    }
+ }
+
+ @Media(min-width:1100px){
+    .machine{
+        width: 30%;
+        max-width: 450px;
+    }
+ }
 
 
 
